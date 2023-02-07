@@ -31,19 +31,19 @@
         小説タイトル
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :hoge, class:"items-text", id:"item-name", placeholder:"小説タイトル（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :title, class:"novels-text", id:"item-name", placeholder:"小説タイトル（必須 40文字まで)", maxlength:"40" %>
       <div class="novel-author">
         <div class="weight-bold-text">
         著者名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :hoge, class:"items-text", id:"novel-author-name", placeholder:"著者名（必須 20文字まで)", maxlength:"20" %>
+      <%= f.text_area :author, class:"novels-text", id:"novel-author-name", placeholder:"著者名（必須 20文字まで)", maxlength:"20" %>
       <div class="items-explain">
         <div class="weight-bold-text">
           小説のレビュー
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :hoge, class:"items-text", id:"item-info", placeholder:"商品のレビュ＝（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :review, class:"novels-text", id:"item-info", placeholder:"商品のレビュ＝（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
     <%# /商品名と商品説明 %>
@@ -53,15 +53,12 @@
       <div class="weight-bold-text">商品の詳細</div>
       <div class="form">
         <div class="weight-bold-text">
-          ジャンル
+          カテゴリー
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
         <div class="weight-bold-text">
-          商品の状態
-          <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-sales-status"}) %>
       </div>
     </div>
     <%# /商品の詳細 %>

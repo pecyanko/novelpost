@@ -25,12 +25,13 @@
       新規投稿小説レビュー
     </div>
     <ul class='item-lists'>
+    <% @novels.each do |novel|%>
 
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
       <li class='list'>
         <%= link_to "#" do %>
         <div class='item-img-content'>
-          <%= image_tag "item-sample.png", class: "item-img" %>
+          <%= image_tag "book.jpeg", class: "item-img" %>
 
           <%# 商品が売れていればsold outを表示しましょう %>
           <div class='sold-out'>
@@ -52,6 +53,7 @@
           </div>
         </div>
         <% end %>
+    <% end %>
       </li>
       <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
 
