@@ -4,4 +4,8 @@ class NovelsController < ApplicationController
     @novels = Novel.all
   end
   
+  def new
+    @novel = Novel.new
+  end
+
 end
