@@ -10,7 +10,7 @@ a {
 .title-contents {
   width: 100vw;
   height: 300px;
-  background-image: image-url('novelpost.png');
+  background-image: image-url('books.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -217,7 +217,7 @@ a {
 /* 商品一覧 */
 
 .item-contents {
-  background-color: #FFF;
+  background-color: sandybrown;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,7 +234,7 @@ a {
   font-size: 3vh;
   margin: 1vh 0;
   text-decoration: none;
-  color: #3ccace;
+  color: black;
   font-weight: bold;
 }
 
@@ -248,7 +248,7 @@ a {
 .item-lists>.list {
   width: 37vh;
   padding: 1vw;
-  background-color: #FFF;
+  background-color: blanchedalmond;
 }
 
 
