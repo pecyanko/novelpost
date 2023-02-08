@@ -25,36 +25,37 @@
       新規投稿小説レビュー
     </div>
     <ul class='item-lists'>
-    <% @novels.each do |novel|%>
+      <% @novels.each do |novel|%>
 
-      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
-      <li class='list'>
-        <%= link_to "#" do %>
-        <div class='item-img-content'>
-          <%= image_tag "book.jpeg", class: "item-img" %>
+        <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+       <li class='list'>
+          <%= link_to "#" do %>
+          <div class='item-img-content'>
+           <%= image_tag novel.image, class: "item-img" %>
 
-          <%# 商品が売れていればsold outを表示しましょう %>
-          <div class='sold-out'>
-            <span>Sold Out!!</span>
-          </div>
-          <%# //商品が売れていればsold outを表示しましょう %>
+           <%# 商品が売れていればsold outを表示しましょう %>
+           <div class='sold-out'>
+             <span>Sold Out!!</span>
+           </div>
+           <%# //商品が売れていればsold outを表示しましょう %>
 
-        </div>
-        <div class='item-info'>
-          <h3 class='item-name'>
-            <%= "商品名" %>
-          </h3>
-          <div class='item-price'>
-            <span><%= "販売価格" %>円<br><%= '配送料負担' %></span>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
+         </div>
+         <div class='item-info'>
+           <h3 class='item-name'>
+             <%= "商品名" %>
+           </h3>
+           <div class='item-price'>
+             <span><%= "販売価格" %>円<br><%= '配送料負担' %></span>
+             <div class='star-btn'>
+               <%= image_tag "star.png", class:"star-icon" %>
               <span class='star-count'>0</span>
-            </div>
-          </div>
-        </div>
-        <% end %>
-    <% end %>
-      </li>
+              </div>
+           </div>
+         </div>
+         <% end %>
+       </li>
+      <% end %>
+      
       <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
 
       <%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>

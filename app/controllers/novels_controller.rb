@@ -10,7 +10,7 @@ class NovelsController < ApplicationController
 
   def create
     @novel = Novel.new(novel_paramas)
-    if @novel.save!
+    if @novel.save
       redirect_to root_path
     else
       render :new
