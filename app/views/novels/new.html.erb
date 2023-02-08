@@ -21,7 +21,9 @@
         <p>
           クリックしてファイルをアップロード
         </p>
+
         <%= f.file_field :image, id:"item-image" %>
+
       </div>
     </div>
     <%# /商品画像 %>
@@ -31,7 +33,9 @@
         小説タイトル
         <span class="indispensable">必須</span>
       </div>
+
       <%= f.text_area :title, class:"novels-text", id:"item-name", placeholder:"小説タイトル（必須 40文字まで)", maxlength:"40" %>
+
       <div class="novel-author">
         <div class="weight-bold-text">
         著者名
@@ -44,6 +48,7 @@
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_area :review, class:"novels-text", id:"item-info", placeholder:"商品のレビュ＝（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+
       </div>
     </div>
     <%# /商品名と商品説明 %>
