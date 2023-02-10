@@ -1,6 +1,7 @@
 class Novel < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_one_attached :image
+  belongs_to :user
 
   validates :title, presence: true
   validates :author, presence: true

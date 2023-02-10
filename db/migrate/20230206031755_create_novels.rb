@@ -5,6 +5,7 @@ class CreateNovels < ActiveRecord::Migration[6.0]
       t.string :author,  null: false
       t.text :review,    nill: false
       t.integer :category_id,  null: false
+      t.references :user, null: false, foreign_Key: true
 
       t.timestamps
     end
