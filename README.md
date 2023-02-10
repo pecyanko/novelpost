@@ -2,12 +2,13 @@
 
 ##novels テーブル
 
-| Column             | Type    | Options     |
-| ------------------ | ------- | ----------- |
-| title              | string  | null: false |
-| author             | string  | null: false |
-| review             | text    | null: false |
-| category_id        | integer | null: false | 
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| title              | string     | null: false                    |
+| author             | string     | null: false                    |
+| review             | text       | null: false                    |
+| category_id        | integer    | null: false                    | 
+| user               | references | null: false, foreign_key: true |
 
 ## Association
 
