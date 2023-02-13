@@ -11,7 +11,7 @@ class NovelsController < ApplicationController
   end
 
   def create
-    @novel = Novel.new(novel_paramas)
+    @novel = Novel.new(novel_params)
     @novel.user_id = current_user.id
     if @novel.save
       redirect_to root_path
@@ -52,8 +52,8 @@ class NovelsController < ApplicationController
 
   private
 
-  def novel_paramas
-    params.require(:novel).permit(:title, :author, :review, :category_id, :image)
+  def novel_params
+    params.require(:novel).permit(:title, :author, :review, :category_id, :image).merge(user_id: current_user.id)
   end
 
   def set_novel
