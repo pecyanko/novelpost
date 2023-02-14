@@ -5,9 +5,7 @@
   <div class="item-box">
     <h2 class="name">
     </h2>
-    <div class="item-img-content">
-      <%= image_tag @novel.image ,class:"item-box-img" %>
-    </div>
+
       <div class="item-price-box">
         <span class="item-price">
         </span>
@@ -16,9 +14,7 @@
       </div>
 
 
-    <div class="item-explain-box">
-      <span><%= @novel.review %></span>
-    </div>
+
     <table class="detail-table">
       <tbody>
         <tr>
@@ -38,8 +34,17 @@
           <th class="detail-item">投稿者</th>
           <td class="detail-value"><%= @novel.user.nickname %></td>
         </tr>
+        <tr>
+          <th class="detail-item">レビュー</th>
+          <td class="detail-value"><%= @novel.review %></td>
+        </tr>
+
       </tbody>
+
     </table>
+        <div class="item-img-content">
+          <%= image_tag @novel.image ,class:"item-box-img" %>
+        </div>
     <div class="option">
       <div class="favorite-btn">
         <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
@@ -65,28 +70,33 @@
   <%# /商品の概要 %>
 
   <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
       <p class="comment-warn">
         相手のことを考え丁寧なコメントを心がけましょう。
         <br>
         不快な言葉遣いなどは利用制限や退会処分となることがあります。
       </p>
-      <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        <span>コメントする<span>
-      </button>
-    </form>
+    <div class="container">
+     <% if user_signed_in? %>
+        <%= form_with(model: [@novel, @comment], local: true) do |form| %>
+         <%= form.text_area :content, placeholder: "コメントする", rows: "2" %>
+         <%= form.submit "SEND" %>
+       <% end %>
+     <% else %>
+       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+     <% end %>
+      <div class="comments">
+        <h4>＜コメント一覧＞</h4>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.content %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+
   </div>
-  <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の商品
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの商品 ＞
-    </a>
-  </div>
-  <a href="#" class="another-item"><%= @novel.category_id %>をもっと見る</a>
+
 </div>
 
 

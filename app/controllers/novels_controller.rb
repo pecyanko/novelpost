@@ -22,6 +22,8 @@ class NovelsController < ApplicationController
 
   def show
     @novel = Novel.find(params[:id])
+    @comment = Comment.new
+    @comments = @novel.comments.includes(:user)
   end
 
   def edit
