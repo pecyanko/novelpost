@@ -216,6 +216,12 @@ a {
 
 /* 商品一覧 */
 
+.search-form>.input-box {
+  width: 50%;
+  height: 5vh;
+  padding-left: 5px;
+}
+
 .item-contents {
   background-color: sandybrown;
   display: flex;

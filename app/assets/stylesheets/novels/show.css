@@ -1,7 +1,7 @@
 /* 商品の概要 */
 
 .item-show {
-  background-color: #f8f8f8;
+  background-color: sandybrown;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -10,9 +10,9 @@
 }
 
 .item-box {
-  background-color: #FFF;
-  width: 70vw;
-  min-width: 1200px;
+  background-color: seashell;
+  width: 50vw;
+  min-width: 1000px;
   padding: 10vh 15vw;
   display: flex;
   flex-direction: column;
@@ -26,8 +26,8 @@
 }
 
 .item-box-img {
-  height: 30vh;
-  width: 40vw;
+  height: 20vh;
+  width: 30vw;
   min-height: 500px;
   background-color: rgb(205, 202, 202);
   object-fit: contain;
