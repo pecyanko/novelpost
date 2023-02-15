@@ -1,0 +1,12 @@
+<%= render "shared/header" %>
+
+<div class="item-list">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @novels.each do |novel| %>
+    <div class="list" style="background-image: url(<%= novel.image %>);">
+      <%= simple_format(novel.author) %>
+      <span class="ZZZZ"><%= novel.title %></span>
+    </div>
+  <% end %>
+</div>
+<%= render "shared/footer" %>
