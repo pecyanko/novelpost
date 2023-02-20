@@ -5,7 +5,7 @@
 自分が好きな小説を投稿したり、他人の投稿を見てコメントを残せたりできます。
 
 ## URL
-(https://novelpost.onrender.com)
+https://novelpost.onrender.com
 
 ## テスト用アカウント
 - Basic認証ID :admin
