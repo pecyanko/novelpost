@@ -2,7 +2,7 @@
  novelpost
 
 ## アプリケーション概要
-自分が好きな小説を投稿したり、他人の投稿を見たてコメントを残せたりできます。
+自分が好きな小説を投稿したり、他人の投稿を見てコメントを残せたりできます。
 
 ## URL
 (https://novelpost.onrender.com)
@@ -42,6 +42,8 @@
 - 感想ボタン機能
 
 ## テーブル設計
+[ER図](https://user-images.githubusercontent.com/121007915/220075019-9b067cf5-0e0e-4b01-a89e-efc2f35d1987.png)
+
 
 ### novels テーブル
 
