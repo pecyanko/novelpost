@@ -11,3 +11,20 @@
   padding: 1vw;
   background-color: blanchedalmond;
 }
+
+.my-post{
+  font-size: 24px;
+  color: sandybrown;
+  text-align: center;
+  font-weight: bold;
+}
+
+.novel-nil{
+  font-size: 15px;
+  font-weight: bold;
+
+}
+
+.item-lists{
+  height: 50vh;
+}
