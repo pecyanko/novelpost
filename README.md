@@ -57,9 +57,9 @@ https://novelpost.onrender.com
 
 #### Association
 
-- has_many :users
-- belongs_to :favorites
-- belongs_to :comment
+- belongs_to :users
+- has_many :favorites
+- has_many :comment
 
 ### users テーブル
 
@@ -70,8 +70,9 @@ https://novelpost.onrender.com
 | name               | string | null: false |
 
 #### Association
-- belongs_to :novel
-- belongs_to :favorite
+- has_many :novel
+- has_many :favorite
+- has_many :user
 
 
 
@@ -85,7 +86,8 @@ https://novelpost.onrender.com
 | novel      | references | null: false, foreign_key: true  |
 
 #### Association
-- has_many :novels
+- belomgs_to :novels
+- belongs_to :user
 
 
 
@@ -99,5 +101,5 @@ https://novelpost.onrender.com
 
 #### Association
 
-- has_many :users
-- has_many :novels
+- belongs_to :users
+- belongs_to :novels
