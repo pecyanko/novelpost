@@ -72,7 +72,6 @@ https://novelpost.onrender.com
 #### Association
 - has_many :novel
 - has_many :favorite
-- has_many :user
 
 
 
